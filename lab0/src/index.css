@@ -1,0 +1,50 @@
+/* Global styles for the Tic‑Tac‑Toe app.  Adjust spacing and layout
+   here to customise the look and feel. */
+body {
+  margin: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.square:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.square:disabled {
+  cursor: default;
+  color: #555;
+}
+
+.status {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
